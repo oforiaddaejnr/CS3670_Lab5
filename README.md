@@ -21,3 +21,9 @@ No additional libraries are required—only Python's built-in `random` and `stri
 ```bash
 python password_generator.py
 ```
+
+2. **Follow the prompt and something similar below is what you will see in your terminal:**
+```
+Enter desired password length: 12
+Generated password: k#A2v$TdB3!x
+```
