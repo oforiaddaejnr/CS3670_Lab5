@@ -24,4 +24,12 @@ def generate_password(length: int) -> str:
 
     return ''.join(password)
 
-print(generate_password(12))
+if __name__ == "__main__":
+    try:
+        user_input = input("Enter desired password length: ")
+        length = int(user_input)
+        password = generate_password(length)
+        print("Generated password:", password)
+    except ValueError as e:
+        print("Error:", e)
+
