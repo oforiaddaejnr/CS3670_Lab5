@@ -10,6 +10,7 @@ def generate_password(length: int) -> str:
     digits = string.digits
     symbols = string.punctuation
 
+    # Ensure at least one character from each type
     password = [
         random.choice(lower),
         random.choice(upper),
@@ -17,9 +18,11 @@ def generate_password(length: int) -> str:
         random.choice(symbols),
     ]
 
+    # Fill the rest with random characters from all types
     all_chars = lower + upper + digits + symbols
     password += random.choices(all_chars, k=length - 4)
 
+    # Shuffle to avoid predictable order
     random.shuffle(password)
 
     return ''.join(password)
